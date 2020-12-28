@@ -1,0 +1,39 @@
+<%- include('../partials/header.ejs') %>
+<div class="form-group">
+Logged in User <%= email %><br>
+
+<h1>Report for the Evening</h1>
+<%= message %>
+
+<form method="POST" content="reporting/evening">
+    <label for="date">Date:</label> <input class="form-control" type="date" id="date" name="date" required value="<%= today %>">
+    <label for="sport">Time spent on sport and exercise (in hours):</label>  <input class="form-control" type="number" id ="sport" required name="sport" min="0" step="any">
+    <label for="study">Time spent studying (in hours):</label>  <input class="form-control" type="number" id ="study" required name="study" min="0" step="any">
+    <label for="eating">Regularity and quality of eating:</label> 
+    <div id="eating" class="form-control">
+        <input type="radio" name="eating" value="1" /><span> Very poor (1)</span>
+        <input type="radio" name="eating" value="2" /><span>Poor (2)</span>
+        <input type="radio" name="eating" value="3" checked="checked" /><span>Average (3)</span>
+        <input type="radio" name="eating" value="4" /><span>Good (4)</span>
+        <input type="radio" name="eating" value="5" /><span>Exellent (5)</span>
+        </div>
+             
+    <label for="generic">Generic mood:</label> 
+    <div id="generic" class="form-control">
+        <input type="radio" name="generic" value="1" /><span> Very poor (1)</span>
+        <input type="radio" name="generic" value="2" /><span>Poor (2)</span>
+        <input type="radio" name="generic" value="3" checked="checked" /><span>Average (3)</span>
+        <input type="radio" name="generic" value="4" /><span>Good (4)</span>
+        <input type="radio" name="generic" value="5" /><span>Exellent (5)</span>
+                    
+                </div>
+             <br><br>        
+    <input type="submit" value="Submit" class="btn btn-primary">
+
+</form>
+</div>
+<button class="btn btn-primary"  onclick="window.location.href='../../behavior/reporting'"> go back</button>  
+
+<%- include('../partials/footer.ejs') %>
+
+

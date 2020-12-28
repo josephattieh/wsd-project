@@ -1,0 +1,35 @@
+<%- include('../partials/header.ejs') %>
+Logged in User <%= email %><br>
+<h1> Report for the Morning</h1>
+<%= message %>
+<div class="form-group">
+<form method="POST" content="reporting/morning">
+    <label for="date">Date:</label> <input type="date" class="form-control" id="date" name="date" required  value="<%= today %>"><br>
+    <label for="duration">Sleep duration (in hours):</label>  <input  class="form-control" type="number" id ="duration" min="0" required name="duration" step="any">
+    <label for="quality">Sleep quality:</label> 
+    <div id="quality" class="form-control">
+             <input type="radio" name="quality" value="1" /><span> Very poor (1)</span>
+            <input type="radio" name="quality" value="2" /><span>Poor (2)</span>
+            <input type="radio" name="quality" value="3" checked="checked" /><span>Average (3)</span>
+            <input type="radio" name="quality" value="4" /><span>Good (4)</span>
+            <input type="radio" name="quality" value="5" /><span>Exellent (5)</span>
+        </div>
+            <br>
+            <label for="generic">Generic mood:</label> 
+            <div id="generic" class="form-control">
+                            <input type="radio" name="generic" value="1" /><span> Very poor (1)</span>
+                            <input type="radio" name="generic" value="2" /><span>Poor (2)</span>
+                            <input type="radio" name="generic" value="3" checked="checked" /><span>Average (3)</span>
+                            <input type="radio" name="generic" value="4" /><span>Good (4)</span>
+                            <input type="radio" name="generic" value="5" /><span>Exellent (5)</span>
+                        </div>
+                            <br>
+    <input class="btn btn-primary" type="submit" value="Submit">
+
+</form>
+</div>
+<button class="btn btn-primary" onclick="window.location.href='../../behavior/reporting'"> go back</button> <br>
+
+<%- include('../partials/footer.ejs') %>
+
+

@@ -1,0 +1,29 @@
+<%- include('./partials/header.ejs') %>
+
+<h1>Web Development Project</h1>
+<h2> Submitted by Joseph Attieh</h2>
+<br>
+<p> This webpage serves as a self-monitoring tool for the users.</p>
+
+<% if (average_generic_mood_today) { %>
+Average Mood Today: <%= average_generic_mood_today %>
+
+<% } %>
+<br>
+<% if (average_generic_mood_yesterday) { %>
+    Average Mood Yesterday: <%= average_generic_mood_yesterday %>
+    
+    <% } %>
+<br>
+<% if (text) { %>
+       Trend: <%= text %>
+        
+        <% } %>
+
+
+<br>        <br>
+<button name="login" class="btn btn-primary" onclick="window.location.href='auth/login'" >Login </button>
+<button name="signup" class="btn btn-primary"  onclick="window.location.href='auth/registration'"  > Sign Up </button>
+<button name="report"  class="btn btn-primary" onclick="window.location.href='behavior/reporting'">Report</button>
+<%- include('./partials/footer.ejs') %>
+

@@ -1,0 +1,11 @@
+<%- include('../partials/header.ejs') %>
+<p> You are already Logged In as </p><b> <%= email %> </b> <br>
+<br>
+
+<form method="POST" action ="/auth/logout" class="">
+    <input class="btn btn-primary" type="submit" value="logout"/>
+</form>
+</div>
+<%- include('../partials/footer.ejs') %>
+
+

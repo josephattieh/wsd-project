@@ -1,0 +1,77 @@
+<%- include('../partials/header.ejs') %>
+Logged in User <%= email %><br>
+<br>
+<h1>Summary of the reports submitted</h1>
+<div class="form-group">
+<form method="POST" content="/behavior/summary">
+    Week: <input class="form-control" type="week" name="week" value="<%=weekdefault %>"/>
+    Month: <input class="form-control" type="month" name="month" value="<%=monthdefault %>"/>
+    <input type="submit" class="btn btn-primary"  value="Submit!"/>
+</form>
+</div>
+<table class="table">
+<tr>
+    <td%></td>
+    <td><b>Weekly Stats</b></td>
+</tr>
+<tr>
+    <td>Average Sleep Duration</td>
+    <td><%= week.average_sleep_duration%></td>
+</tr>
+<tr>
+    <td>Average Sleep Quality</td>
+    <td><%= week.average_sleep_quality%></td>
+</tr>
+<tr>
+    <td>Average Generic Mood </td>
+    <td><%= week.average_generic_mood%></td>
+</tr>
+<tr>
+    <td>Average Sport Duration </td>
+    <td><%= week.average_sport_duration%></td>
+</tr>
+<tr>
+    <td>Average Studying Duration </td>
+    <td><%= week.average_studying_duration%></td>
+</tr>
+<tr>
+    <td>Average Eating Quality  </td>
+    <td><%= week.average_eating_quality%></td>
+</tr>
+</table>
+
+<table class="table">
+    <tr>
+    <td%></td>
+    <td><b> Monthly Stats</b></td>
+</tr>
+<tr>
+    <td>Average Sleep Duration</td>
+    <td><%= month.average_sleep_duration%></td>
+</tr>
+<tr>
+    <td>Average Sleep Quality</td>
+    <td><%= month.average_sleep_quality%></td>
+</tr>
+<tr>
+    <td>Average Generic Mood </td>
+    <td><%= month.average_generic_mood%></td>
+</tr>
+<tr>
+    <td>Average Sport Duration </td>
+    <td><%= month.average_sport_duration%></td>
+</tr>
+<tr>
+    <td>Average Studying Duration </td>
+    <td><%= month.average_studying_duration%></td>
+</tr>
+<tr>
+    <td>Average Eating Quality  </td>
+    <td><%= month.average_eating_quality%></td>
+</tr>
+</table>
+
+<button  class="btn btn-primary"   onclick="window.location.href='../../behavior/reporting'"> go back</button> <br>
+<%- include('../partials/footer.ejs') %>
+
+

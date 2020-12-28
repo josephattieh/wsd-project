@@ -1,0 +1,19 @@
+<%- include('../partials/header.ejs') %>
+Logged in User <%= email %><br>
+<br>
+<p style="color:blue;"> <%= message %><br> </p>
+<div class="form-group">
+    
+<div id="container">
+
+<button id="b1" class="btn btn-primary"  onclick="window.location.href='reporting/morning'"> Morning</button> 
+<button id="b2" class="btn btn-primary" onclick="window.location.href='reporting/evening'"> Evening</button> 
+<button id ="b3" class="btn btn-primary" onclick="window.location.href='/behavior/summary'" > Summary </button><br>
+</div>
+<form method="POST" action ="/auth/logout" class="">
+    <input class="btn btn-primary" type="submit" value="logout"/>
+</form>
+</div>
+<%- include('../partials/footer.ejs') %>
+
+
