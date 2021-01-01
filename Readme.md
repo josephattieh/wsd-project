@@ -55,7 +55,7 @@ is_morning boolean NOT NULL
 ### First, set up the DATABASE\_URL\_LOCAL variable to be equal to the database URL you got from ElephantSQL. The configuration used to run the project locally was as follow:
 
 ```
-$env:DATABASE_URL_LOCAL='postgres://dgphvolt:XWHrlKChN6XhdSsWzSOWpZWflSLAxQCe@lallah.db.elephantsql.com:5432/dgphvolt';
+$env:DATABASE_URL_LOCAL='postgres://username:password@lallah.db.elephantsql.com:5432/dgphvolt';
 ```
 ### Second, launch the application as follows:
 
@@ -89,7 +89,7 @@ We developed 20 tests for the application. Those are listed below:
 
 ###  First, set up the DATABASE\_URL variable to be equal to the database URL and the TEST\_ENVIRONMENT to true. The configuration used to run the project locally was as follow(we used a different database for testing, but we can use the same):
 ```
-$env:DATABASE_URL_LOCAL='postgres://hvpjiioe:9aK6OBpcXTtWTmsO43Kj9V0jYta9QAs8@isilo.db.elephantsql.com:5432/hvpjiioe';
+$env:DATABASE_URL_LOCAL='postgres://username:password@isilo.db.elephantsql.com:5432/hvpjiioe';
 ```
 ### Second, launch the application as follows:
 ```
